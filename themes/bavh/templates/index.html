@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="main">
+  <div class=".container-fluid">
+    {% for article in articles_page.object_list %}
+    {% if loop.index0 % 3  == 0 %}
+    <div class="row">
+    {% endif %}
+      <div class="col-xs-12 col-md-4">
+        <div class="boxcontent">
+          {% if article.featured %}
+          <a href="/{{ article.url }}" class="image"><img src="{{ article.featured }}" alt="" class="image"/></a>
+          {% endif %}
+          <div class="boxheader">
+            <h3><a href="/{{ article.url }}">{{article.title }}</a></h3>
+            <span class="date">{{ article.date|strftime('%d %B %Y') }}</span>
+          </div>
+          <div class="boxbody"> 
+              {{ article.summary }} <div><a href="/{{ article.url }}">Read more ...</a></div>
+          </div>
+        </div>
+      </div>
+    {% if loop.index % 3  == 0 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% if DEFAULT_PAGINATION %}
+    <div class="row">
+      <div class="col-xs-1 col-md-1">&nbsp;</div>
+      <div class="col-xs-5 col-md-5">
+    {% if articles_page.has_previous() %}
+      {% if articles_page.previous_page_number() == 1 %}
+        <a class="align_left" href="/{{ page_name }}.html">Previous</a>
+      {% else %}
+        <a class="align_left" href="/{{ page_name }}{{ articles_page.previous_page_number() }}.html">Previous</a>
+      {% endif %}
+    {% endif %} 
+      </div>
+      <div class="col-xs-5 col-md-5 paginator_next">
+    {% if articles_page.has_next() %} 
+        <a class="align_right" href="/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next</a> 
+    {% endif %}
+      </div>
+      <div class="col-xs-1 col-md-1">&nbsp;</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

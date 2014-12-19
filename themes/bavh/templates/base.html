@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+  Dopetrope 2.0 by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+    {% endif %}
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
+    <link href="/theme/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/theme/css/style.css" rel="stylesheet">
+    {% endblock head %}
+  </head>
+  <body id="the-body">
+    <!-- Header Wrapper -->
+    <div id="header">
+      <div class="page-header text-center no-border">
+        <div id="blogtitle">
+            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+      <div id="footer">
+        <div class="container footer-container">
+          <div class="row">
+            <div class="col-xs-1 col-md-1">&nbsp;</div>
+            <div class="col-md-5 col-xs-5">
+            {% if categories is defined %}
+              <div class="cat_title">Categories</div>
+              <div class="cat_items">
+                <ul>
+                  {% for cat, null in categories[0:4] %}
+                  <li><a href="/{{ cat.url }}">{{ cat }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            </div>
+            <div class="col-md-5 col-xs-5">
+              <div class="about_title">About</div>
+              <div class="about_items">
+                <ul>
+                  <li>Bart Vanherck</li>
+                  <li>Software Tester</li>
+                  {% if TWITTER_USERNAME is defined %}
+                  <li><a href="https://twitter.com/vherckb"><img src="/theme/images/twitter.png"/> @{{ TWITTER_USERNAME }}</a></li>
+                  {% endif %}
+                </ul>
+            </div>
+            <div class="col-xs-1 col-md-1">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/theme/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
