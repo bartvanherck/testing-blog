@@ -1,9 +1,9 @@
-title: A new year
+title: Dynamic attributes in Python
 date: 2015-01-09 18:01:20
 tags: python
 category: testing
-summary: Dynamic attributes
 featured: https://farm4.staticflickr.com/3924/14895038696_6988e18b1e_o.jpg
+summary: I needed a decent library for my needs, so I wrote them for myself. For that I wanted to have code that looks simple and is easy to use.
 
 I must test some json rpc code. But the libraries I wanted to use did not fulfilled my needs. So time to write my own. There must be a json output like this:
 
