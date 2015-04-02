@@ -1,6 +1,6 @@
 title: Several git tips
 date: 2014-07-14 18:32:00
-category: version control
+category: other
 tags: git
 Summary: Some nice git tips. What to do if a stash is deleted, or to fast switch between branches. You all can read it in the article of the day.
 

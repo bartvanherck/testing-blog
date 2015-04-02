@@ -1,6 +1,6 @@
 title: convert openstreetmap files to geojson 
 tags: javascript, nodejs
-category: web
+category: other
 date: 2014-04-15 21:06:00
 Summary: I recently found a nice project named osm2geojson. This project can convert openstreetmap xml files, or OSM files to geo-json format. In my projects, 
 

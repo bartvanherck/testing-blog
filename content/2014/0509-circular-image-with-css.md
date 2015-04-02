@@ -1,6 +1,6 @@
 title: circular image with css
 date: 2014-05-09 21:00:24
-category: web
+category: other
 Summary: I recently added a circular image on the header of this page. In fact, this is not a circular image at all. But thanks to the new CSS, it is rendered as a circular image. It is done as a background image, but that does not matter for the purpose of this article. 
 
 I recently added a circular image on the header of this page. In fact, this is not a circular image at all. But thanks to the new CSS, it is rendered as a circular image. It is done as a background image, but that does not matter for the purpose of this article anyway. 

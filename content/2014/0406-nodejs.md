@@ -1,7 +1,7 @@
 title: Nodejs
 tags: nodejs
 date: 2014-04-06 00:21:00
-category: web, testing
+category: testing
 Summary: Today I am doing some end-to-end testing of a frontend. That frontend is made in angularjs. The features of this application is, that it has to be generic to fit in several other projects.
 
 Today I am doing some end-to-end testing of a frontend. That frontend is made in angularjs. The features of this application is, that it has to be generic to fit in several other projects.

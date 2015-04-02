@@ -1,7 +1,7 @@
 title: git bash prompt
 tags: git
 date: 2014-03-18 19:33:00
-category: version control
+category: other
 Summary: Even as a tester, we need version control systems. At this moment, personally I use git. When installing git on windows, there is in the shell tab completion as default. This is a nice feature that I wanted to have on all my systems, say it to be mac and linux.
 
 

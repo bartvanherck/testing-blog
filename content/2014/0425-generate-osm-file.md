@@ -1,6 +1,6 @@
 title: generate osm file
 date: 2014-04-25 20:22:00
-Category: web
+Category: other
 Summary: I did download a planet file from my country. What I want now is an extract for the city I live in. This is also very simple.
 
 I did download a planet file from my country. What I want now is an extract for the city I live in. This is also very simple.
