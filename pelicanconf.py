@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Bart Vanherck'
 SITENAME = u'Software And Testing'
 SITEURL = 'http://bartvanherck.github.io'
+#SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
@@ -26,12 +27,18 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', 'https://twitter.com/vherckb'),)
 
 DEFAULT_PAGINATION = 9
 
 TWITTER_USERNAME = "vherckb"
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-THEME = "themes/bavh"
+RELATIVE_URLS = True
+THEME = "themes/bavh-pelican"
+
+RECENT_POST_COUNT = 9
+# SITELOGO = "Vanamo_Logo.png"
+HIDE_SITENAME = False
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_TAGS_ON_MENU = False
+ABOUT_ME = '<div>Bart Vanherck</div><div>software tester</div>'
